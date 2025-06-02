@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e6f0ff, #dbeaff);
+  min-height: 100vh;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid #99c2ff;
+}
+
+h1 {
+  text-align: center;
+  color: #003366;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #003366;
+  margin-bottom: 20px;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.input-section input[type="text"] {
+  background-color: #cce5ff;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+}
+
+.input-section input[type="date"] {
+  background-color: #fff3cd;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+}
+
+.input-section select {
+  background-color: #d1ecf1;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+}
+
+#add-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#add-btn:hover {
+  background-color: #218838;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.filters button {
+  flex: 1;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
+
+.filters button:nth-child(1) {
+  background-color: #004080;
+}
+.filters button:nth-child(2) {
+  background-color: #007bff;
+}
+.filters button:nth-child(3) {
+  background-color: #0056b3;
+}
+
+.sort-btn {
+  background-color: #ffc107;
+  color: #212529;
+  padding: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.sort-btn:hover {
+  background-color: #e0a800;
+}
+
+.tasks {
+  margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .filters button,
+  .sort-btn {
+    width: 100%;
+  }
+}
+/* Add this at the end of style.css */
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .app-card {
+    padding: 20px;
+  }
+
+  .top-row,
+  .middle-row,
+  .filters {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+  .top-row input,
+  .middle-row button,
+  #searchInput {
+    width: 100%;
+  }
+
+  .filters button {
+  flex: 1 1 calc(50% - 10px);
+  min-width: 120px;
+}
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .task-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .task-info span {
+    font-size: 0.9rem;
+  }
+}
